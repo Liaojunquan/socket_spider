@@ -1,2 +1,10 @@
 # socket_spider
-使用socket服务制作分布式爬虫系统
+使用socket服务制作字幕分布式爬虫系统
+
+基于简单的socket服务端与客户端连接，制作出的分布式爬虫。
+
+tv_spider_server.py服务端负责解析网页获取各电影或电视剧字幕下载地址，将下载地址分发到各客户端去下载
+
+tv_spider_client.py客户端负责接收下载地址，并下载字幕文件转码为utf-8，保存到本机并使用scp备份到字幕文件存储服务器
+
+socket_server.py和socket_client.py只是简单的实现socket通讯传输字符串
